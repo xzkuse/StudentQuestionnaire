@@ -1,0 +1,16 @@
+<!--logs.wxml-->
+<view class="">
+	<view class="dianzi"></view>
+	<view class="quesstion" wx:for-items="{{questionArr}}" wx:key="name" value="{{item.name}}">
+		
+		<text>{{index+1}}.{{item.title}}</text>
+		<radio-group bindchange="chooseTab">
+			<radio wx:for-items="{{item.child}}" wx:for-index="idx" wx:for-item="checkName"
+			 wx:key="checkName" value="{{index}}"
+			 checked="{{checkName.checked}}">
+				<text>{{checkName.childName}}</text>
+			</radio>
+		</radio-group>
+
+	</view>
+</view>
