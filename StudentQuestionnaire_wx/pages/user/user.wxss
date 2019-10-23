@@ -1,0 +1,75 @@
+/* pages/user/user.wxss */
+page {
+	background-color: #F8F8F8;
+	height: 100%;
+	width: 100%;
+}
+
+.nav {
+	/* background-color: #fff; */
+	background-color: #2E88F6;
+	padding-top: 50rpx;
+	padding-bottom: 25rpx;
+}
+
+
+.top {
+	width: 160rpx;
+	height: 160rpx;
+	margin: 0 auto;
+}
+
+/*  外边框是圆形 必须要配合block使用，否则改变圆形无法生效  */
+.headerImage {
+	overflow: hidden;
+	display: block;
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	border: 2px solid #fff;
+	box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nickname {
+	margin-bottom: 10rpx;
+	text-align: center;
+	color: #fff;
+	font-size: 35rpx;
+	margin-top: 30rpx;
+}
+
+.item {
+	height: 70rpx;
+	background-color: #fff;
+	margin: 20rpx;
+	display: flex;
+	border-bottom: #F8F8F8 1rpx solid;
+	/* border-radius: 20rpx; */
+}
+
+.left {
+	display: flex;
+	justify-content: flex-start;
+	flex-grow: 1;
+	color: #778BAA;
+}
+
+.right {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+	color: #8F8F8F;
+	margin-right: 20rpx;
+}
+
+.rightImage {
+	width: 60rpx;
+	height: 60rpx;
+	display: block;
+	border-radius: 50%;
+	border: 2px solid #8F8F8F;
+}
+
+.ledtText {
+	color: #778BAA;
+}

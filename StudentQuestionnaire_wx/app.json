@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/user/user",
     "pages/logs/logs",
     "pages/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "问卷调查表",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
