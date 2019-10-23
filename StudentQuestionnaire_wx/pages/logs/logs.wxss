@@ -1,0 +1,37 @@
+.quesstion{
+	direction: left;
+	margin: 15rpx;
+    border: 1rpx solid #ddd;
+	border-radius: 8rpx;
+	padding: 15rpx;
+	font-size: 30rpx;
+}
+/* .quesstion text{
+} */
+.quesstion radio-group {
+ /*   border: 1rpx solid #ddd;
+	border-radius: 3rpx; */
+	margin-top: 20rpx;
+}
+
+.quesstion radio {
+    display: block;
+    padding: 5rpx;
+	margin-top: 5rpx;
+	font-size: 35rpx;
+	transform: scale(0.90);
+}
+
+.dianzi{
+	height: 2rpx;
+	background: #ddd;
+}
+
+.log-list {
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.log-item {
+  margin: 10rpx;
+}
