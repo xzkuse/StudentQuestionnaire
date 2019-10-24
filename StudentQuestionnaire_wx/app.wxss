@@ -1,10 +1,22 @@
 /**app.wxss**/
 .container {
-  height: 100%;
+	box-sizing: border-box;
+	background-color: #F8F8F8;
+	height: 100%;
+	width: 100%;
+}
+ 
+.bgWhiteSolidRadius10{
+	background-color: #fff;
+	box-shadow:-3px 4px 19px 0px rgba(0, 0, 0, 0.06);
+	border-radius:10px;
+	padding: 8rpx 0rpx;
+	margin: 30rpx;
+}
+ 
+/* height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 200rpx 0;
-  box-sizing: border-box;
-} 
+  padding: 200rpx 0; */
