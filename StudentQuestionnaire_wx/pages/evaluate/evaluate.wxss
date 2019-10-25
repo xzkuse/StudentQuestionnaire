@@ -1,0 +1,32 @@
+.gradeArea{
+  font-size: 30rpx;
+  color:#000;
+  text-align:center;
+  margin-top: 20rpx;
+}
+
+.gradeNum{
+  font-size: 80rpx;
+  color: red;
+}
+
+.evaluateArea{
+  font-size: 35rpx;
+  color:gray;
+  text-align:left;
+  margin-top: 20rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+}
+.evaluateArea text{
+  letter-spacing: 5rpx;
+
+}
+
+.gradeOpera{
+  margin-top: 20rpx;
+  text-align:right;
+}
+.gradeOpera i-icon{
+  text-align:right;
+}

@@ -1,0 +1,25 @@
+<view class="gradeArea">
+	<text class="gradeNum">95</text>
+  <text>分</text>
+</view>
+
+<view class="gradeArea">
+  <i-rate 
+    disabled= 'false'
+    count="5"
+    value="5"
+    size = "30"></i-rate>
+</view>
+
+<view class="evaluateArea">
+<!-- 说明内容 -->
+  <text>成绩优异给你点赞!成绩优异给你点赞!成绩优异给你点赞!成绩优异给你点赞!成绩优异给你点赞!成绩优异给你点赞!</text>
+</view>
+
+<view class="gradeOpera">
+  <i-icon type="share_fill" size="28" color="#80848f"  bind:click="handleOpen1" />
+</view>
+
+
+
+<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
