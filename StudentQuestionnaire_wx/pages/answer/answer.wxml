@@ -1,0 +1,26 @@
+<!--pages/answer/answer.wxml-->
+
+<view style="margin-left:30rpx;">
+  <text style="display:block">轮播答题界面</text>
+ 
+</view>
+
+<view class="checkArea">
+  <text>{{nowContent.title}}</text>
+    <radio-group bindchange="checkContent">
+			<radio wx:for-items="{{nowContent.content}}" wx:for-index="idx" wx:for-item="checkName"
+			 wx:key="checkName" value="{{idx}}"
+			 checked="{{checkName.checked}}">
+				<text>{{checkName.name}}</text>
+			</radio>
+		</radio-group>
+</view>
+
+<view class="checkNextArea">
+  <text class="{{enableLeft? 'leftText':'leftTextUnEnable'}}" bindtap="onLastContent">上一题</text>
+  <text class="{{enableRight? 'rightText':'rightTextUnEnable'}}" bindtap="onNextContent">下一题</text>
+</view>
+
+
+
+  <i-button bind:click="gotoLogs" size="small" type="success">进入列表答题页</i-button>
