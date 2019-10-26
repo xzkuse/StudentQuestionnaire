@@ -1,3 +1,7 @@
+.titleArea{
+  padding: 20rpx;
+}
+
 .gradeArea{
   font-size: 30rpx;
   color:#000;

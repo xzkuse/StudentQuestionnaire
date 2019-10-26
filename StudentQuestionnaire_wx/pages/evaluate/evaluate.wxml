@@ -1,5 +1,5 @@
-<view>
-  <i-icon type="mine_fill" size="28" color="#80848f" bindtap="gotoMine"/>
+<view class="titleArea">
+  <i-icon type="mine_fill" size="35" color="#80848f" bindtap="gotoMine"/>
 </view>
 
 <view class="gradeArea">

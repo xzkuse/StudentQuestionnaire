@@ -1,0 +1,57 @@
+/* pages/answer/answer.wxss */
+
+.checkArea {
+  direction: left;
+  margin: 25rpx;
+  border: 1rpx solid #ddd;
+  border-radius: 8rpx;
+  padding: 15rpx;
+  font-size: 30rpx;
+}
+
+.checkArea radio-group {
+  border-radius: 3rpx;
+  margin-top: 20rpx;
+}
+
+.checkArea radio {
+  display: block;
+  padding: 5rpx;
+  margin-top: 5rpx;
+  font-size: 35rpx;
+  transform: scale(0.90);
+}
+
+.checkNextArea{
+  color: #010101;
+  font-size: 36rpx;
+  margin-top: 20rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  display: flex;
+}
+
+.leftText{
+  display: inline-block;
+  text-align: left;
+  flex: 1;
+}
+
+.leftTextUnEnable{
+  display: inline-block;
+  text-align: left;
+  flex: 1;
+  color: #8F8F8F;
+}
+
+.rightText{
+  display: inline-block;
+  text-align: right;
+  flex: 1;
+}
+.rightTextUnEnable{
+  display: inline-block;
+  text-align: right;
+  flex: 1;
+  color: #8F8F8F;
+}
