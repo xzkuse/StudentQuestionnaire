@@ -6,11 +6,13 @@
 		<text>{{index+1}}.{{item.title}}</text>
 		<radio-group bindchange="chooseTab">
 			<radio wx:for-items="{{item.child}}" wx:for-index="idx" wx:for-item="checkName"
-			 wx:key="checkName" value="{{index}}"
+			 wx:key="checkName" value="{{index}},{{idx}}"
 			 checked="{{checkName.checked}}">
 				<text>{{checkName.childName}}</text>
 			</radio>
 		</radio-group>
 
 	</view>
+
+  <i-button bind:click="gotoEvalute" type="success">进入评分页</i-button>
 </view>

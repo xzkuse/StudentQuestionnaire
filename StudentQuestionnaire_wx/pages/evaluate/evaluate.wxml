@@ -1,5 +1,9 @@
+<view>
+  <i-icon type="mine_fill" size="28" color="#80848f" bindtap="gotoMine"/>
+</view>
+
 <view class="gradeArea">
-	<text class="gradeNum">95</text>
+	<text class="gradeNum">85</text>
   <text>分</text>
 </view>
 
@@ -7,7 +11,7 @@
   <i-rate 
     disabled= 'false'
     count="5"
-    value="5"
+    value="4"
     size = "30"></i-rate>
 </view>
 
@@ -17,9 +21,10 @@
 </view>
 
 <view class="gradeOpera">
-  <i-icon type="share_fill" size="28" color="#80848f"  bind:click="handleOpen1" />
+  <i-icon type="share_fill" size="28" color="#80848f" bindtap="showshareWindow"/>
 </view>
 
 
 
-<i-action-sheet visible="{{ visible1 }}" actions="{{ actions1 }}" show-cancel bind:cancel="handleCancel1" bind:click="handleClickItem1" />
+<i-action-sheet visible="{{ visibleShareWindow }}" actions="{{ actions1 }}" mask-closable="true"
+        show-cancel bind:cancel="hideshareWindow" bind:click="contuineOpera" />

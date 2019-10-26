@@ -28,5 +28,13 @@
   text-align:right;
 }
 .gradeOpera i-icon{
+  display: inline-block;
+  height: 70rpx;
+  width: 70rpx;
   text-align:right;
+  margin-right: 40rpx;
+  padding-right: 6rpx;
+  padding-top: 5rpx;
+   border:1rpx solid #80848f;
+  border-radius: 50%;
 }

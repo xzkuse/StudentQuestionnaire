@@ -12,8 +12,31 @@ Page({
     logs: []
   },
   chooseTab:function(radio){
-	  console.log(radio);
+    //这里是为了将父子类的选中index全部传入
+	  console.log(radio.detail.value);
+    var checindex=radio.detail.value;
+    // strs = str.split(","); //字符分割
+    var checkArr = checindex.split(",");
+    //这里将字符串转为 int值
+    var in1 = parseInt(checkArr[0]);
+    var in2 = parseInt(checkArr[1]);
+
+//注意这里是获取的子数组，并实现单选（选中的为true，其他为false）
+    var checkNumArr = this.data.questionArr[in1].child;
+
+    for (var i = 0; i < checkNumArr.length;i++){
+      checkNumArr[i].checked = (i == in2);
+    }
   },
+/**
+ * 进入评分页，并带值
+ */
+  gotoEvalute(){
+    wx.navigateTo({
+      url: '../evaluate/evaluate?id=1'
+    })
+  },
+
   onLoad: function () {
     this.setData({
       logs: (wx.getStorageSync('logs') || []).map(log => {
