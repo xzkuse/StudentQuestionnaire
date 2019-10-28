@@ -1,0 +1,118 @@
+<resources xmlns:tools = "http://schemas.android.com/tools">
+    <string name = "app_name">RFIDServiceDemo</string>
+    <string name = "str_status_f">状态：%s</string>
+    <string name="demo_inventory">盘点</string>
+    <string name="demo_write">读写锁</string>
+    <string name="demo_set">设置</string>
+    <string name="device_state" tools:ignore="MissingTranslation">设备状态：</string>
+    <string name="time" translatable="false">00:00:00</string>
+    <string name="count" tools:ignore="MissingTranslation">Count:</string>
+
+    <!--tags operate-->
+    <string name="tags_read">读标签</string>
+    <string name="tags_write">写标签</string>
+    <string name="tags_lock">锁标签</string>
+
+    <!--tags operate button-->
+    <string name="tags_read_button">读</string>
+    <string name="tags_write_button">写</string>
+    <string name="tags_lock_button">锁</string>
+
+    <!--operate content-->
+    <string name="tag_data_type">数据类型</string>
+    <string name="data_type_sixteen">16进制</string>
+    <string name="data_type_ascii">ASCII</string>
+    <string name="data_type_gbk">GBK</string>
+    <string name="data_type_utf" translatable="false">utf-8</string>
+
+    <string name="tag_operate_start_address">起始地址</string>
+    <string name="tag_operate_block">块数</string>
+    <string name="tag_operate_password">密码：</string>
+
+    <!--rfid bank-->
+    <string name="tag_blocks">操作区块</string>
+    <string name="tag_reserve">Reserve</string>
+    <string name="tag_epc">EPC</string>
+    <string name="tag_tid">TID</string>
+    <string name="tag_user">User</string>
+
+    <!--lock tags-->
+    <string name="tag_open_block">开放</string>
+    <!--<string name="tag_permanent_open_block">永久开放</string>-->
+    <string name="tag_lock_block">锁定</string>
+    <!--<string name="tag_permanent_lock_block">永久锁定</string>-->
+
+    <!--operate power-->
+    <string name="rfid_output_power">射频输出功率</string>
+    <string name="power_read">读取</string>
+    <string name="power_set">设置</string>
+    <string name="power_unit">dBm</string>
+
+    <!--operate frequency-->
+    <string name="rfid_frequency">射频频谱</string>
+    <string name="rfid_frequency_region">区域</string>
+    <string name="rfid_frequency_point">频点</string>
+    <string name="rfid_frequency_read">获取</string>
+    <string name="rfid_frequency_set">设置</string>
+
+    <!--operate frequency region-->
+    <string name="rfid_frequency_region_FCC">FCC(Ameria)</string>
+    <string name="rfid_frequency_region_ETSI">ETSI(Europe)</string>
+    <string name="rfid_frequency_region_CHN">CHN(China)</string>
+    <string name="rfid_frequency_range" tools:ignore="MissingTranslation">频率范围:</string>
+    <string name="rfid_frequency_end">截止频率:</string>
+
+    <!--复位读写器-->
+    <string name="rfid_model_reset" translatable="false">复位读写器</string>
+
+    <!--盘点参数设置-->
+    <string name="rfid_Inventory_agreement" translatable="false">盘点协议</string>
+    <string name="rfid_Inventory_agreement_gen2" translatable="false">Gen2</string>
+    <string name="rfid_Inventory_agreement_6b" translatable="false">6B</string>
+
+    <!--提示信息-->
+    <string name="AlertDialog_title" tools:ignore="MissingTranslation">提示</string>
+    <string name="AlertDialog_message" tools:ignore="MissingTranslation">正在读取数据，停止之后可查看数据列表</string>
+    <string name="AlertDialog_sure" tools:ignore="MissingTranslation">确认</string>
+
+    <!--session设置-->
+    <string name="session_title" tools:ignore="MissingTranslation"> Session</string>
+    <string name="session_s0" translatable="false">S0</string>
+    <string name="session_s1" translatable="false">S1</string>
+    <string name="session_s2" translatable="false">S2</string>
+    <string name="session_s3" translatable="false">S3</string>
+
+    <!--Q 值-->
+    <string name="QValue" translatable="false"> Q 值</string>
+
+    <!--inventory-->
+    <string name="inventory_refersh" translatable="false">暂无数据点击刷新</string>
+    <string name="inventory_times" translatable="false">times:</string>
+    <string name="inventory_devices" translatable="false">设备状态：</string>
+    <string name="inventory_button_clean" translatable="false">清空</string>
+    <string name="inventory_button_stop" translatable="false">停止</string>
+    <string name="inventory_button_start" translatable="false">开始</string>
+
+
+    <!--inventory_epc_item-->
+    <string name="item_epc" translatable="false">epc:</string>
+    <string name="item_count" translatable="false">count:</string>
+
+    <!--base_write_page-->
+    <string name="button_read" translatable="false">读</string>
+    <string name="button_write" translatable="false">写</string>
+    <string name="button_lock" translatable="false">锁</string>
+
+
+    <string name="no_module" translatable="false">模块不存在</string>
+    <string name="connect_success" translatable="false">连接成功</string>
+    <string name="module_disconnect" translatable="false">断开连接</string>
+    <string name="tag_unit" translatable="false">个</string>
+
+
+    <string name="write_null_toast" translatable="false">请随意输入</string>
+    <string name="write_null_toast_end" translatable="false">个数字或字母,再次尝试写入！</string>
+
+    <string name="write_toast" translatable="false">写入数据错误,请输入正确的数据类型！例如输入框中红色数据!</string>
+
+</resources>
