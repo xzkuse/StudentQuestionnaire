@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/TextBackgroundStyle"
+            android:text="@string/tags_lock" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal">
+
+            <RadioGroup
+                android:id="@+id/rg_lockType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingTop="8dp"
+                tools:ignore="UselessParent">
+
+                <RadioButton
+                    android:id="@+id/rb_lockOpen"
+                    style="@style/RadioButtonStyle"
+                    android:text="@string/tag_open_block" />
+                <RadioButton
+                    android:id="@+id/rb_lockLocked"
+                    style="@style/RadioButtonStyle"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/tag_lock_block" />
+
+            </RadioGroup>
+
+
+
+        </LinearLayout>
+
+        <TextView
+           style="@style/TextBackgroundStyle"
+            android:text="@string/tag_blocks"/>
+
+        <RadioGroup
+            android:id="@+id/rg_lockBank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_lockReserve"
+                style="@style/RadioButtonStyle"
+                android:layout_marginStart="10dp"
+                android:text="@string/tag_reserve" />
+
+            <RadioButton
+                android:id="@+id/rb_lockEpc"
+                style="@style/RadioButtonStyle"
+                android:text="@string/tag_epc"/>
+
+            <RadioButton
+                android:id="@+id/rb_lockTid"
+                style="@style/RadioButtonStyle"
+                android:text="@string/tag_tid" />
+
+            <RadioButton
+                android:id="@+id/rb_lockUser"
+                style="@style/RadioButtonStyle"
+                android:text="@string/tag_user" />
+
+        </RadioGroup>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextViewStyle"
+                android:text="@string/tag_operate_password"/>
+
+            <EditText
+                android:id="@+id/et_lockPassword"
+                style="@style/EditTextStyle"
+                android:inputType="number"
+                tools:ignore="LabelFor,TextFields" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="100dp">
+            <Button
+                android:id="@+id/btn_lockTag"
+                style="@style/common_button_style"
+                android:text="@string/tags_lock_button" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

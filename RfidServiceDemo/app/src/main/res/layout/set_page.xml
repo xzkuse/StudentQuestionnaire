@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="3dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/demo_set"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            style="@style/TextBackgroundStyle"
+            android:layout_marginTop="15dp"
+            android:text="@string/rfid_output_power" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:orientation="horizontal">
+            <EditText
+                android:id="@+id/et_setPowerData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:inputType="number"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:text="@string/power_unit"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_readPower"
+                style="@style/common_button_style"
+                android:text="@string/power_read"/>
+            <Button
+                android:id="@+id/btn_setPower"
+                style="@style/common_button_style"
+                android:text="@string/power_set"/>
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TextBackgroundStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/rfid_frequency" />
+
+        <RadioGroup
+            android:id="@+id/rg_frequencyType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_frequency_fcc"
+                style="@style/RadioButtonStyle"
+                android:layout_marginStart="10dp"
+                android:text="@string/rfid_frequency_region_FCC" />
+
+            <RadioButton
+                android:id="@+id/rb_frequency_etsi"
+                style="@style/RadioButtonStyle"
+                android:text="@string/rfid_frequency_region_ETSI" />
+
+            <RadioButton
+                android:id="@+id/rb_frequency_chn"
+                style="@style/RadioButtonStyle"
+                android:text="@string/rfid_frequency_region_CHN" />
+
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rfid_frequency_range"/>
+
+
+            <TextView
+                android:id="@+id/tv_frquencyRange"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+
+            <Button
+                android:id="@+id/btn_getFrequency"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_read" />
+
+            <Button
+                android:id="@+id/btn_setFrequency"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_set" />
+
+        </LinearLayout>
+
+         <TextView
+           style="@style/TextBackgroundStyle"
+           android:layout_marginTop="10dp"
+           android:text="@string/session_title" />
+       <RadioGroup
+           android:id="@+id/rg_session_type"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:layout_gravity="center_horizontal"
+           android:paddingTop="8dp">
+
+           <RadioButton
+               android:id="@+id/rb_session_s0"
+               style="@style/RadioButtonStyle"
+               android:layout_marginStart="10dp"
+               android:text="@string/session_s0" />
+
+           <RadioButton
+               android:id="@+id/rb_session_s1"
+               style="@style/RadioButtonStyle"
+               android:layout_marginLeft="20dp"
+               android:text="@string/session_s1" />
+           <RadioButton
+               android:id="@+id/rb_session_s2"
+               style="@style/RadioButtonStyle"
+               android:layout_marginStart="10dp"
+               android:text="@string/session_s2" />
+           <RadioButton
+               android:id="@+id/rb_session_s3"
+               style="@style/RadioButtonStyle"
+               android:layout_marginStart="10dp"
+               android:text="@string/session_s3" />
+       </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_session_get"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_read" />
+
+            <Button
+                android:id="@+id/btn_session_set"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_set" />
+
+        </LinearLayout>
+
+
+        <TextView
+            style="@style/TextBackgroundStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/QValue" />
+       <!-- <RadioGroup
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="8dp">
+
+            <RadioButton
+
+                style="@style/RadioButtonStyle"
+                android:layout_marginStart="10dp"
+                android:text="@string/rfid_Inventory_agreement_gen2" />
+
+            <RadioButton
+
+                style="@style/RadioButtonStyle"
+                android:layout_marginLeft="20dp"
+                android:text="@string/rfid_Inventory_agreement_6b" />
+        </RadioGroup>-->
+
+        <EditText
+            android:id="@+id/et_QValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingBottom="50dp">
+
+
+            <Button
+                android:id="@+id/btn_getQValue"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_read" />
+
+            <Button
+                android:id="@+id/btn_setQValue"
+                style="@style/common_button_style"
+                android:text="@string/rfid_frequency_set" />
+
+        </LinearLayout>
+       <!-- <TextView
+            style="@style/TextBackgroundStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/rfid_Inventory_agreement" />
+        <RadioGroup
+            android:id="@+id/rg_inventory_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="8dp">
+
+            <RadioButton
+                android:id="@+id/rb_inventory_gen"
+                style="@style/RadioButtonStyle"
+                android:layout_marginStart="10dp"
+                android:text="@string/rfid_Inventory_agreement_gen2" />
+
+            <RadioButton
+                android:id="@+id/rb_inventory_6b"
+                style="@style/RadioButtonStyle"
+                android:layout_marginLeft="20dp"
+                android:text="@string/rfid_Inventory_agreement_6b" />
+        </RadioGroup>-->
+
+
+      <!--  <TextView
+            style="@style/TextBackgroundStyle"
+            android:layout_marginTop="10dp"
+            android:text="@string/rfid_model_reset" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="100dp">
+
+            <Button
+                android:id="@+id/btn_resetModule"
+                style="@style/common_button_style"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:text="@string/rfid_model_reset"/>
+        </LinearLayout>
+-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="60dp"
+            android:layout_marginLeft="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="当前版本:"/>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" V1.0  2019-03-15  11:09"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
+
