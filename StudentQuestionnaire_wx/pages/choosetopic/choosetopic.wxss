@@ -1,0 +1,56 @@
+/* pages/choosetopic/choosetopic.wxss */
+page{
+	background-color: #13b8d1;
+}
+
+.whiteBg{
+	background-color: #fafaf3;
+	box-shadow:-3rpx 4rpx 10rpx 0rpx #bfbfbf;
+	margin-top: 10rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+}
+
+.whiteBgDivider{
+	width: 100%;
+	height: 1rpx;
+	background-color: #80848f;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+} 
+
+.datiContent{
+	padding: 20rpx 15rpx;
+}
+
+.jiaojuan{
+	text-align: center;
+}
+
+.radiusButton{
+	display: inline-block;
+	margin-top: 15rpx;
+	margin-bottom: 15rpx;
+	font-size: 30rpx;
+	padding: 15rpx 30rpx;
+	
+	border:2rpx solid #80848f;
+	border-radius: 15%;
+}
+
+.datiContentNormal{
+	display: block;
+	background-color: #e7e8f4;
+	border:2rpx solid #dedee6;
+	border-radius: 5rpx;
+	margin-top: 20rpx;
+	padding: 15rpx 20rpx;
+}
+.datiContentChecked{
+	display: block;
+	background-color: #e7e8f4;
+	border:2rpx solid #1296db;
+	border-radius:5rpx;
+	margin-top: 20rpx;
+	padding: 15rpx 20rpx;
+}

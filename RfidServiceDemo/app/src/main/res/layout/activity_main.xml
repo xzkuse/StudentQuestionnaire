@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:app = "http://schemas.android.com/apk/res-auto"
+    xmlns:tools = "http://schemas.android.com/tools"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:orientation="vertical"
+    tools:context = ".MainActivity">
+
+    <LinearLayout
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/but_start"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="开始"
+            />
+
+        <TextView
+            android:id="@+id/text_status"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="状态：s"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/text_op"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="---"
+        />
+
+    <LinearLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/but_read_tag"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="读取标签"
+            />
+        <Button
+            android:id="@+id/but_write_tag"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="写入标签"
+            />
+        <Button
+            android:id="@+id/but_lock_tag"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="锁标签？"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/but_set_power"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="设置射频输出功率"
+            />
+        <Button
+            android:id="@+id/but_set_reg"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="设置射频频谱"
+            />
+        <Button
+            android:id="@+id/but_session"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="设置session"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/but_set_q"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="设置q值"
+            />
+        <Button
+            android:id="@+id/but_get_paramter"
+            android:layout_width = "wrap_content"
+            android:layout_height = "wrap_content"
+            android:text="获取所有参数"
+            />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width = "match_parent"
+        android:layout_height = "wrap_content"
+        >
+
+        <TextView
+            android:id="@+id/txt_log"
+            android:layout_width = "match_parent"
+            android:layout_height = "wrap_content"/>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>

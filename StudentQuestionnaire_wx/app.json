@@ -1,5 +1,7 @@
 {
   "pages": [
+    "pages/choosetopic/choosetopic",
+    "pages/multilevel/multilevel",
     "pages/answer/answer",
     "pages/logs/logs",
     "pages/evaluate/evaluate", 

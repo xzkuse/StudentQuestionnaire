@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 默认背景 -->
+    <item android:drawable="@drawable/rfid_scan_gray"></item>
+    <!-- 点击背景 -->
+    <item android:drawable="@drawable/rfid_scan_red" android:state_pressed="true"></item>
+
+
+</selector>
