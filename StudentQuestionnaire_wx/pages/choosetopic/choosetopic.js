@@ -44,8 +44,16 @@ Page({
       that.setData({
         currentIndex: nextIndex
       })
-    }, 600);
+    }, 300);
 	},
+/**
+ * 进入结果页面
+ */
+gotoResult(){
+  wx.navigateTo({
+    url: '../chooseresult/chooseresult',
+  })
+},
 
   /**
    * 生命周期函数--监听页面加载
