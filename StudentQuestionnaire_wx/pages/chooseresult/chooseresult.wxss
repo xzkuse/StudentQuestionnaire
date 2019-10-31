@@ -1,0 +1,89 @@
+/* pages/chooseresult/chooseresult.wxss */
+page{
+	background-color: #13b8d1;
+}
+
+.whiteBg{
+	background-color: #fafaf3;
+	box-shadow:-3rpx 4rpx 10rpx 0rpx #bfbfbf;
+	margin-top: 10rpx;
+	margin-left: 10rpx;
+	margin-right: 10rpx;
+}
+
+.whiteBgDivider{
+	width: 100%;
+	height: 1rpx;
+	background-color: #80848f;
+	margin-top: 10rpx;
+	margin-bottom: 10rpx;
+} 
+.jiaojuan{
+	text-align: center;
+}
+
+.radiusButton{
+	display: inline-block;
+	margin-top: 15rpx;
+	margin-bottom: 15rpx;
+	font-size: 35rpx;
+	padding: 15rpx 30rpx;
+  font-style: blod;
+}
+
+.titleDeifen{
+  text-align: center;
+  height: 80rpx;
+  font-size: 35rpx;
+  color: #101010;
+  line-height: 80rpx;
+  font-style: blod;
+}
+
+.singleArea{
+  padding: 15rpx 10rpx;
+}
+
+.lineVersion{
+  display: inline-block;
+  width:6rpx;
+  height:41rpx;
+  background-color:#d81e06; 
+  color:#d81e06; 
+  margin-left: 15rpx;
+}
+
+.singletitle{
+  display: inline-block;
+  font-size: 35rpx;
+  color: #101010;
+  margin-left: 10rpx;
+  line-height: 45rpx;
+}
+
+.datizhengque{
+  margin-left: 25rpx;
+  margin-right: 50rpx;
+  margin-top: 35rpx;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: blue;
+  color: #fff;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}
+.daticuowu{
+  margin-left: 25rpx;
+  margin-right: 50rpx;
+  margin-top: 35rpx;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #d81e06;
+  color: #fff;
+  width: 70rpx;
+  height: 70rpx;
+  text-align: center;
+  line-height: 70rpx;
+}

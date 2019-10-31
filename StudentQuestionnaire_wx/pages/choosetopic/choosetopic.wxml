@@ -24,6 +24,6 @@
 
 <view class="whiteBg jiaojuan" >
 	
-	<text class="radiusButton">交卷</text>
+	<text class="radiusButton" bindtap="gotoResult">交卷</text>
 	
 </view>
