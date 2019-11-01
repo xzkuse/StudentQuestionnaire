@@ -1,0 +1,105 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name = "AppTheme" parent = "Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name = "colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name = "colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name = "colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <!--<item name="android:windowFullscreen">true</item>-->
+    </style>
+
+    <!---->
+    <style name="BottomButtonTheme">
+        <item name="android:background">@drawable/ripple_bg</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">51dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+
+    <style name="TopButtonStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:background">@drawable/ripple_bg</item>
+
+    </style>
+
+    <!--radioButton style-->
+    <style name="RadioButtonStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--text has background style-->
+    <style name="TextBackgroundStyle">
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/text_color</item>
+        <item name="android:background">@color/textView_background</item>
+    </style>
+
+    <!--textView style-->
+    <style name="TextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="EditTextStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+
+    <!--common button style-->
+    <style name="common_button_style">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_margin">5dip</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/button_border_radius</item>
+        <!-- <item name="android:background">@drawable/ripple_bg</item>-->
+    </style>
+
+
+    <style name="LinearTextImageStyle">
+        <item name="android:background">@drawable/text_border</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">45dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:color">#666</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="TextStyle">
+
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#252323</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="ImageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background"></item>
+        <item name="android:layout_weight">3</item>
+    </style>
+</resources>
