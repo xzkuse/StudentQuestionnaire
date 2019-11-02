@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DrawChart">
+        <attr name="backLineColor" format="reference|color" />
+        <attr name="backLineWidth" format="dimension" />
+        <attr name="rightTextSize" format="dimension" />
+        <attr name="rightTextColor" format="reference|color" />
+        <attr name="rightWidth" format="dimension" />
+        <attr name="bottomTextSize" format="dimension" />
+        <attr name="bottomTextColor" format="reference|color" />
+        <attr name="bottomTextTopMargin" format="dimension" />
+        <attr name="bottomMargin" format="dimension" />
+        <attr name="lineColor" format="reference|color" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="hollowCircleColor" format="reference|color" />
+        <attr name="hollowCircleRadius" format="dimension" />
+        <attr name="solidCircleRadius" format="dimension" />
+        <attr name="solidCircleColor" format="reference|color" />
+        <attr name="maxBackBitmap" format="reference" />
+        <attr name="maxBackBitmapHeight" format="dimension" />
+        <attr name="maxBackBitmapBottom" format="dimension" />
+        <attr name="maxTextColor" format="reference|color" />
+        <attr name="maxTextSize" format="dimension" />
+        <attr name="maxTextBottom" format="dimension" />
+        <attr name="isOpenBlurMask" format="boolean" />
+        <attr name="blurMaskWidth" format="dimension" />
+        <attr name="topSpace" format="dimension" />
+        <attr name="bitmapPadding" format="dimension" />
+        <attr name="minLineHeight" format="dimension" />
+        <attr name="clickDistance" format="dimension" />
+    </declare-styleable>
+
+
+    <declare-styleable name = "PlateNumberEnteredView">
+        <attr name="PlateNumberTitleName" format="reference|string" />
+        <attr name="PlateNumberTitleColor" format="reference|color" />
+        <attr name="PlateNumberTitleGraiy" format="reference|integer" >
+            <flag name="left" value="0" />
+            <flag name="center" value="1" />
+            <flag name="right" value="2" />
+        </attr>
+    </declare-styleable>
+
+</resources>
