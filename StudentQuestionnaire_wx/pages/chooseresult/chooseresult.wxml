@@ -1,0 +1,60 @@
+<!--pages/chooseresult/chooseresult.wxml-->
+<view class="whiteBg" style="height: 800rpx;" >
+  <view class="titleDeifen">
+    得分:80/100
+  </view>
+
+	<view  class="whiteBgDivider"></view>
+
+  <view class="singleArea">
+    <!-- 单选  -->
+    <view>
+      <view class="lineVersion"></view>
+      <text  class="singletitle">单选</text>
+    </view>
+
+    <view>
+    <!-- datizhengque -->
+    	<text wx:for-items="{{questionResultArr}}" 
+        wx:for-index="index" 
+        wx:for-item="ques"
+        wx:key="ques"  
+        class="{{ques.result? 'datizhengque':'daticuowu'}}" 
+        bindtap="checkOne"  data-index="{{index}}"
+			 >{{ques.name}}</text>
+      <!-- <text  class="datizhengque">1</text> -->
+    </view>
+
+  </view>
+
+
+  <view class="singleArea" style="margin-top:39rpx;">
+    <!-- 判断  -->
+    <view>
+      <view class="lineVersion"></view>
+      <text  class="singletitle">判断</text>
+    </view>
+
+    <view>
+    <!-- datizhengque -->
+    	<text wx:for-items="{{questionResultArr}}" 
+        wx:for-index="index" 
+        wx:for-item="ques"
+        wx:key="ques"  
+        class="{{ques.result? 'datizhengque':'daticuowu'}}" 
+        bindtap="checkOne"  data-index="{{index}}"
+			 >{{ques.name}}</text>
+      <!-- <text  class="datizhengque">1</text> -->
+    </view>
+
+  </view>
+
+
+
+</view>
+
+<view class="whiteBg jiaojuan" >
+	
+	<text class="radiusButton" bindtap="gotoResult">错题已收录至错题本，再接再厉！</text>
+	
+</view>

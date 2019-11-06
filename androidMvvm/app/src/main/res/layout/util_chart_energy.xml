@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android = "http://schemas.android.com/apk/res/android"
+    xmlns:chartLine = "http://schemas.android.com/apk/res-auto"
+    android:layout_width = "match_parent"
+    android:layout_height = "match_parent"
+    android:orientation = "vertical">
+
+    <View
+        android:id="@+id/view_toplan"
+        android:layout_width = "match_parent"
+        android:layout_height = "1dp"
+        android:background="#F6F6F6"
+        />
+
+    <TextView
+        android:id="@+id/txt_energy_title"
+        android:layout_width = "wrap_content"
+        android:layout_height = "wrap_content"
+        android:text="折线图类型"
+        android:textColor="#2E88F6"
+        android:textSize="10sp"
+        android:layout_marginTop="13dp"
+        android:paddingTop="2dp"
+        />
+
+    <!--com.beyondsoft.smarthome.utils.widget.chart.DrawChart-->
+    <com.mallcloud.utils.weight.chart.DrawChart
+        android:id = "@+id/line_chart_energy"
+        android:layout_width = "match_parent"
+        android:layout_height = "190dp"
+        chartLine:backLineColor="#ECECEC"
+        chartLine:backLineWidth="1dp"
+        chartLine:rightTextSize="10sp"
+        chartLine:rightTextColor="#B4B4B4"
+        chartLine:rightWidth="20dp"
+        chartLine:bottomTextSize="10sp"
+        chartLine:bottomTextColor="#B4B4B4"
+        chartLine:bottomTextTopMargin="15dp"
+        chartLine:bottomMargin="39dp"
+        chartLine:lineColor="#FF8441"
+        chartLine:lineWidth="1dp"
+        chartLine:hollowCircleColor="#FF8441"
+        chartLine:hollowCircleRadius="1.5dp"
+        chartLine:solidCircleRadius="1.5dp"
+        chartLine:solidCircleColor="#2E88F6"
+        chartLine:maxBackBitmap="@mipmap/icon_max_back"
+        chartLine:maxBackBitmapHeight="28dp"
+        chartLine:maxBackBitmapBottom="3dp"
+        chartLine:maxTextColor="#FF8441"
+        chartLine:maxTextSize="10sp"
+        chartLine:maxTextBottom="16dp"
+        chartLine:isOpenBlurMask="true"
+        chartLine:blurMaskWidth="3dp"
+        chartLine:topSpace="28dp"
+        chartLine:bitmapPadding="10dp"
+        chartLine:minLineHeight="6dp"
+        chartLine:clickDistance="16dp"
+        />
+
+</LinearLayout>

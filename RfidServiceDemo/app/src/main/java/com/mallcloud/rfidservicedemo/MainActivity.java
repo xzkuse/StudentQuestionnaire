@@ -1,16 +1,20 @@
 package com.mallcloud.rfidservicedemo;
 
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import com.mallcloud.base.view.BaseActivity;
+import com.mallcloud.rfiddemo_c.fragment.WriteLockFragment;
 import com.mallcloud.utils.ToastUtil;
+import com.mallcloud.utils.logs.LogTag;
 import com.supoin.rfidservice.sdk.DataUtils;
 import com.supoin.rfidservice.sdk.ModuleController;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.Random;
 
@@ -18,7 +22,7 @@ import java.util.Random;
  * @author xzk
  * @data 2019/10/28
  * @email xiezhengkun@beyondsoft.com
- * @remark 首页
+ * @remark 首页   注意本demo的基础是需要一个服务sdk的安装包
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -69,13 +73,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             @Override
             public void onServiceStarted() {
                 super.onServiceStarted();
-                ToastUtil.showLong("服务启动成功");
+                textStatus.setText(String.format(getString(R.string.str_status_f), "服务启动成功"));
             }
 
             @Override
             public void onError() {
                 super.onError();
-                ToastUtil.showLong("服务不存在");
+                textStatus.setText(String.format(getString(R.string.str_status_f), "服务不存在"));
             }
 
             @Override
@@ -95,9 +99,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 //盘点标签数据
                 StringBuilder strEpcList = new StringBuilder();
                 for (Map<String, String> data:moduleController.tagList) {
-                    String strEpc = data.get(DataUtils.KEY_EPC_TID);
-                    String strPc = data.get(DataUtils.KEY_PC);
-                    strEpcList.append(strEpc).append(",").append(strPc).append("\r\n");
+                    strEpcList.append(data.toString());
+//                    String strEpc = data.get(DataUtils.KEY_EPC_TID);
+//                    String strTAG_EPC = data.get(DataUtils.KEY_TAG_EPC);
+//                    String strTAG_DATA = data.get(DataUtils.KEY_TAG_DATA);
+//                    String strPc = data.get(DataUtils.KEY_PC);
+//                    strEpcList.append(strEpc).append(",").append(strPc).append("\r\n");
+//                    strEpcList.append(strTAG_EPC).append(",").append(strTAG_DATA).append("\r\n");
                 }
 
                 txtLog.setText(strEpcList);
@@ -105,11 +113,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
             @Override
             public void onReadTag(byte[] tagData) {
-                super.onReadTag(tagData);
                 textStatus.setText(String.format(getString(R.string.str_status_f), "读取标签"));
                 if(tagData == null) return;
 
-                txtLog.setText(Arrays.toString(tagData));
+               String typeTagData = DataUtils.byteToHexStr(tagData);
+                txtLog.setText(typeTagData);
+                super.onReadTag(tagData);
             }
 
             @Override
@@ -145,13 +154,34 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     }
 
     private int key = 0;
+    private boolean isInvera = false;
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.but_read_tag:
                 //读标签
-                moduleController.moduleReadTag(DataUtils.BANK_EPC,2,2,null,null);
+                if(moduleController.tagList != null && moduleController.tagList.size()>0){
+                    HashMap<String, String> hashMap = moduleController.tagList.get(0);
+                    String sStr = hashMap.get(DataUtils.KEY_EPC_TID);
+                    LogTag.d("--->"+sStr);
+                    if(TextUtils.isEmpty(sStr)){
+                        return;
+                    }
+                    //读取user数据
+//                    moduleController.moduleReadTag(DataUtils.BANK_USER, 0, 6, null,DataUtils.hexStrToByte(
+//                                                                                                          sStr));
+                    //读取epc id数据
+//                    moduleController.moduleReadTag(DataUtils.BANK_EPC, 0, 6, null,DataUtils.hexStrToByte(
+//                                                                                                          sStr));
+//                    //读取 RESERVED 密码区 数据
+//                    moduleController.moduleReadTag(DataUtils.BANK_RESERVED, 0, 6, null,DataUtils.hexStrToByte(
+//                                                                                                          sStr));
+                    //读取  TID  标签本身id 数据  一般出厂固化，不可修改，只读
+                    moduleController.moduleReadTag(DataUtils.BANK_TID, 0, 10, null,DataUtils.hexStrToByte(
+                                                                                                          sStr));
+//                    moduleController.moduleReadTag(DataUtils.BANK_EPC,2,2,null,hashMap.get(DataUtils.KEY_TAG_EPC).toCharArray());
+                }
                 break;
             case R.id.but_write_tag:
                 //写标签
@@ -171,6 +201,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 moduleController.moduleLockTag(DataUtils.MEMBANK_EPC,DataUtils.LOCK_TYPE_LOCK, pwd,null);
                 break;
             case R.id.but_start:
+                isInvera = !isInvera;
+                if(isInvera){
+                    moduleController.moduleInventoryTag();
+                    butStart.setText("结束");
+                }else {
+                    moduleController.moduleStopInventoryTag();
+                    butStart.setText("开始");
+                }
                 break;
             case R.id.but_set_power:
                 textStatus.setText(String.format(getString(R.string.str_status_f), "设置射频输出功率"));

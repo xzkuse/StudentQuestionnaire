@@ -1,0 +1,29 @@
+<view class="whiteBg" style="height: 800rpx; ">
+	<view style="padding-left: 20rpx;padding-top: 15rpx;padding-right: 30rpx;">
+		
+		<i-row style="height: 30rpx; ">
+		    <i-col span="12" i-class="col-class">单项选择</i-col>
+		    <i-col span="12" i-class="col-class" style="text-align: right;">3/20</i-col>
+		</i-row>
+	</view>
+	<view  class="whiteBgDivider">
+	</view>
+	
+	<view class="datiContent" >
+		<text class="datiTitle">{{questionArr[currentIndex].title}}</text>
+		
+		<text wx:for-items="{{questionArr[currentIndex].childArr}}" 
+			wx:for-index="index" 
+			wx:for-item="quesstion"
+			 wx:key="questionIn"  
+			class="{{quesstion.checked? 'datiContentChecked':'datiContentNormal'}}" 
+			bindtap="checkOne"  data-index="{{index}}"
+			 >{{quesstion.name}}</text>
+	</view>
+</view>
+
+<view class="whiteBg jiaojuan" >
+	
+	<text class="radiusButton" bindtap="gotoResult">交卷</text>
+	
+</view>
