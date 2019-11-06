@@ -11,3 +11,9 @@
 /build
 /captures
 .externalNativeBuild
+
+/RfidServiceDemo/build/
+/RfidServiceDemo/.idea/
+
+/RfidServiceDemo/app/build/
+*.lock
