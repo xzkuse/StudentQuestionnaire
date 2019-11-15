@@ -9,6 +9,22 @@
         android:roundIcon = "@mipmap/ic_launcher_round"
         android:supportsRtl = "true"
         android:theme = "@style/AppTheme">
+
+        <meta-data
+            android:name="xposedmodule"
+            android:value="true" />
+        <meta-data
+            android:name="xposeddescription"
+            android:value="Hook位置信息" />
+        <meta-data
+            android:name="xposedminversion"
+            android:value="30" />
+
+        <activity
+            android:label = "@string/title_activity_hock_location"
+            android:name = ".HockLocationActivity"
+            android:theme = "@style/AppTheme.NoActionBar">
+        </activity>
         <activity android:name = ".MainActivity">
             <intent-filter>
                 <action android:name = "android.intent.action.MAIN"/>

@@ -1,3 +1,4 @@
 <resources>
     <string name = "app_name">androidMvvm</string>
+    <string name = "title_activity_hock_location">HockLocationActivity</string>
 </resources>
