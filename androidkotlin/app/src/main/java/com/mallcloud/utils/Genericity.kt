@@ -34,7 +34,11 @@ void demo(Source<String> strs) {
 
 类型投影
 
-星投影
+星投影  ？？？  完全不理解是什么意思
+Function<*, String> , 代表 Function<in Nothing, String> ;
+Function<Int, *> , 代表 Function<Int, out Any?> ;
+Function<, > , 代表 Function<in Nothing, out Any?> .
+
 
 泛型函数
 fun <T> singletonList(item: T): List<T> {
